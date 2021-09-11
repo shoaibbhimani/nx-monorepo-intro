@@ -1,6 +1,28 @@
 {
   "version": 2,
   "projects": {
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/core/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "main": {
       "root": "apps/main",
       "sourceRoot": "apps/main/src",
@@ -98,6 +120,28 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/main-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "team-a": {
+      "root": "libs/team-a",
+      "sourceRoot": "libs/team-a/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/team-a/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/team-a"],
+          "options": {
+            "jestConfig": "libs/team-a/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

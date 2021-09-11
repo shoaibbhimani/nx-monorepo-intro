@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@@orange-solutions/core": ["libs/core/src/index.ts"],
+      "@@orange-solutions/team-a": ["libs/team-a/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

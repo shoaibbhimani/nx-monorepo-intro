@@ -3,7 +3,7 @@ import styles from './app.module.scss';
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
-import { Core } from '@@orange-solutions/core'
+import { Core, Button } from '@@orange-solutions/core'
 
 export function App() {
   return (
@@ -13,6 +13,7 @@ export function App() {
         <Core />
       </header>
       <main>
+        <Button />
         <h2>Resources &amp; Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>
         <div className="flex github-star-container">
